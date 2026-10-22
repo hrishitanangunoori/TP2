@@ -23,10 +23,17 @@ import entityClasses.LessonsLearnedList;
  * @author Hrishita Nangunoori
  * 
  * @version 1.00		2026-10-04 Initial version for HW2 Task 4
+ * @version 1.01 		2026-10-24 Version for TP2 
  * 
  */
 
 public class ModelLessonsLearned {
+	
+	/**
+	 * Default constructor that is unused.
+	 */
+	public ModelLessonsLearned() {
+	}
 
 	// The id of the lesson currently loaded into the form, or -1 if the form represents a new,
 	// not-yet-created lesson. This is how the page knows whether button_Add or button_Update is
@@ -90,7 +97,7 @@ public class ModelLessonsLearned {
 	}
 
 
-	/*
+	/**
 	 * Shared helper that populates both the ListView and the parallel displayedIds list from a
 	 * LessonsLearnedList, so selecting an item later can be mapped back to the right id.
 	 */
@@ -300,7 +307,7 @@ public class ModelLessonsLearned {
 	}
 
 
-	/*
+	/**
 	 * Parses the raw Effort/Time text fields using LessonLearned.validateNumericField() (US-3.2),
 	 * and if both are valid, sets them on the given lesson. Returns "" on success, or the first
 	 * error message encountered.
@@ -326,7 +333,7 @@ public class ModelLessonsLearned {
 	}
 
 
-	/*
+	/**
 	 * Writes a message into the status label, in green for success or red for an error --
 	 */
 	private static void setStatus(String message, boolean success) {

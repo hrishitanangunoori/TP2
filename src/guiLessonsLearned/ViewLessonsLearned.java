@@ -21,15 +21,16 @@ import javafx.scene.control.CheckBox;
  * <p> Title: ViewLessonsLearned Class. </p>
  * 
  * <p> Description: The Java/FX-based Lessons Learned Page. This page allows a Contributor to create,
- * read, update, and delete lessons learned, fulfilling User Stories US-1.1 through US-4.2
- * documented in User Stories.pdf. This page is patterned after the same manual-layout, singleton-Scene
- * approach as the other role home pages in this project (e.g., ViewContributorHome). </p>
+ * read, update, and delete lessons learned, fulfilling the TP2 requirements. This page is patterned 
+ * after the same manual-layout, singleton-Scene approach as the other role home pages in this 
+ * project (e.g., ViewContributorHome). </p>
  * 
  * <p> Copyright: Team 16 2026 </p>
  * 
  * @author Hrishita Nangunoori
  * 
  * @version 1.00		2026-10-04 Initial version for HW2 Task 4
+ * @version 1.01 		2026-10-24 Version for TP2
  *  
  */
 
@@ -141,7 +142,7 @@ public class ViewLessonsLearned {
 		ModelLessonsLearned.clearForm();
 		ModelLessonsLearned.refreshFullList();
 
-		theStage.setTitle("HW2: Lessons Learned");
+		theStage.setTitle("CSE 360 Foundations: Lessons Learned");
 		theStage.setScene(theViewLessonsLearnedScene);
 		theStage.show();
 	}
@@ -291,7 +292,18 @@ public class ViewLessonsLearned {
 	Helper methods
 
 	 */
-
+	
+	/**********
+	 * Private local method to initialize the fields for a label
+	 * 
+	 * @param l 	The Label object to be initialized
+	 * @param ff	font used
+	 * @param f		The size of the font
+	 * @param w		The width of the label
+	 * @param p		The alignment used
+	 * @param x		The location from the x-axis
+	 * @param y		The location from the y-axis
+	 */
 	private static void setupLabelUI(Label l, String ff, double f, double w, Pos p, double x,
 			double y) {
 		l.setFont(Font.font(ff, f));
@@ -301,6 +313,17 @@ public class ViewLessonsLearned {
 		l.setLayoutY(y);
 	}
 
+	/**********
+	 * Private local method to initialize fields for the button UI
+	 * 
+	 * @param b		The button object to be initialized	
+	 * @param ff	The font used for the button
+	 * @param f		The size of the font
+	 * @param w		The width of the button
+	 * @param p		The alignment
+	 * @param x		The location from the x-axis
+	 * @param y		The location from the y-axis 
+	 */
 	private static void setupButtonUI(Button b, String ff, double f, double w, Pos p, double x,
 			double y) {
 		b.setFont(Font.font(ff, f));
@@ -310,6 +333,14 @@ public class ViewLessonsLearned {
 		b.setLayoutY(y);
 	}
 
+	/**********
+	 * Private local method to initialize fields for the text field
+	 * 
+	 * @param t		The TextField object to be initialized
+	 * @param x		The location from the x-axis
+	 * @param y		The location from the y-axis
+	 * @param w		The preferred width of the TextField
+	 */
 	private static void setupTextFieldUI(TextField t, double x, double y, double w) {
 		t.setLayoutX(x);
 		t.setLayoutY(y);
